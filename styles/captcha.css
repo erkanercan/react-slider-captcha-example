@@ -1,0 +1,15 @@
+.captcha-wrapper .scaptcha-anchor-container {
+  display: none;
+}
+
+.captcha-wrapper .scaptcha-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
