@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import SliderCaptcha from "@slider-captcha/react";
+import { SliderCaptcha } from "@slider-captcha-v2/react";
 
 const Home: NextPage = () => {
   const verifiedCallback = (token: any) => {
@@ -25,13 +24,11 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <button onClick={toggleWrapperCard}>Fire wrapper card</button>
-        <div className="captcha-wrapper">
-          <SliderCaptcha
-            create="api/create"
-            verify="api/verify"
-            callback={verifiedCallback}
-          />
-        </div>
+        <SliderCaptcha
+          create="api/create"
+          verify="api/verify"
+          callback={verifiedCallback}
+        />
       </main>
     </div>
   );
