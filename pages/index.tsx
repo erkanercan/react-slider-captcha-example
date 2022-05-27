@@ -1,7 +1,7 @@
+import { SliderCaptcha } from "@slider-captcha-v2/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { SliderCaptcha } from "@slider-captcha-v2/react";
 
 const Home: NextPage = () => {
   const verifiedCallback = (token: any) => {
@@ -28,6 +28,11 @@ const Home: NextPage = () => {
           create="api/create"
           verify="api/verify"
           callback={verifiedCallback}
+          text={{
+            anchor: "Click here to verify",
+            challenge: "Verify",
+          }}
+          hasReloadButton
         />
       </main>
     </div>
